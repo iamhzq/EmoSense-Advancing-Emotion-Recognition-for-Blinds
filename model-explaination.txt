@@ -1,0 +1,36 @@
+import os
+import numpy as np
+import pandas as pd
+from keras.utils import to_categorical
+from tensorflow.keras.preprocessing.image import load_img
+from keras.models import Sequential
+from keras.layers import Dense, Conv2D, Dropout, Flatten, MaxPooling2D
+
+Explaination:
+1. from keras.utils import to_categorical: Keras is a high-level deep learning library that provides an easy-to-use interface for building neural networks. The to_categorical function is used to one-hot encode categorical labels. It's often used when dealing with classification problems.
+
+2. from tensorflow.keras.preprocessing.image import load_img: TensorFlow is an open-source machine learning library, and Keras is integrated into TensorFlow. Here, we're importing the load_img function from Keras' image preprocessing module. This function is used for loading and processing images.
+
+3. from keras.models import Sequential: Sequential is a Keras class used to create a linear stack of layers for building neural network models. It allows you to define a model layer by layer.
+
+4. from keras.layers import Dense, Conv2D, Dropout, Flatten, MaxPooling2D: These are different types of layers commonly used in neural network architectures:
+
+Dense: A fully connected layer, which connects every neuron in the current layer to every neuron in the next layer.
+Conv2D: Convolutional layer, often used in image processing tasks for feature extraction.
+Dropout: A regularization technique that randomly drops a fraction of neurons during training to prevent overfitting.
+Flatten: Flattens the input, which is necessary when transitioning from convolutional layers to fully connected layers.
+MaxPooling2D: A pooling layer used to down-sample the spatial dimensions of the input data.
+These imports set the stage for building a neural network model for image processing or classification, likely using the Keras library integrated with TensorFlow. The specific details of the model and its usage would depend on the code that follows these import statements.
+
+from tqdm.notebook import tqdm
+Explaination: tqdm is a Python library used to create progress bars and display progress information during loops or operations that may take some time to complete. It's particularly useful when you want to monitor the progress of tasks in a more visually appealing and informative way.
+
+from sklearn.preprocessing import LabelEncoder
+Explaination: Scikit-Learn is a popular Python library for machine learning and data analysis. It provides a wide range of tools for tasks such as data preprocessing, model selection, and evaluation. The sklearn.preprocessing module contains various data preprocessing techniques and tools. LabelEncoder is a class provided by Scikit-Learn that is commonly used for encoding categorical labels into numerical values. In many machine learning algorithms, it is essential to convert categorical data (text or labels) into a numerical format because most machine learning models require numerical inputs.
+
+from keras.models import model_from_json
+Explaination:  Keras is an open-source deep learning library that provides a high-level interface for building and training neural networks. It's widely used for tasks such as image classification, natural language processing, and more.
+
+keras.models Module: The keras.models module in Keras contains functions and classes related to defining, training, and working with neural network models. The model_from_json function is one of these tools.
+
+model_from_json Function: This function is used for loading a trained neural network model from a JSON file. In deep learning, models are typically saved in two parts: the architecture (or configuration) and the trained weights.
